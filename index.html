@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- leaflet css-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- Normal css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Leaflet Clustering CSS  -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+
+  <!-- google font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+
+  <title>Chinese Food in SG</title>
+</head>
+
+<body style="background-color:#f6f4f4">
+
+<div class="background">
+  <div class = "bgimage"></div>
+  <div class="row" style="margin: 0em;">
+    <div class="col-sm-12">
+
+      <h1 style="margin-top:10px">Explore more Chinese Food in SG!<h1>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input type="text" id="searchText" placeholder="Browse for foods!" />
+        <button type="button" class="btn btn-outline-dark" id="searchButton">Search</button>
+        <div id="searchResults"></div>
+      </form>
+      
+      <!-- <div>
+
+        <button id="reservation" style="background-color: rgb(176, 228, 250);" type="button">
+          I am a blue button! Click me!
+          </button>
+
+      </div> -->
+
+      <button id="toggle-btn" style="width:150px;height:30px; font-size:small;" >Types of Chinese Food</button>
+
+
+      <!-- <mystyle>Your Search Result</mystyle> -->
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-em-12">
+
+      <div class="map_box" id="map">
+        <div class="result_box" id="searchContainer"></div>
+
+      </div>
+
+    </div>
+
+    <div style="background-color: aliceblue;border-radius: 2%;margin:2%">
+      <form action="/action_page.php" id=""resForm>
+        <h2>Reservation</h2>
+        <label for="fname">Your full name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="e.g. Aaron Tan"><br>
+        <label for="phno">Phone number:</label><br>
+        <input type="text" id="phno" name="phno" placeholder="e.g. 81234567"><br>
+        <label for="foodPlaceName">Restaurant name:</label><br>
+        <input type="text" id="foodPlaceName name="foodPlaceName" placeholder="e.g. Japramen"><br>
+       <button type="button" id="btnReserve" onclick="alert('Reservation submitted!')" class="btn btn-outline-primary">Submit</button>
+
+      </form> 
+        </button>
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+  <!-- leaflet javascript -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+
+
+  <!-- api-->
+  <script src="api.js"></script>
+
+  <!-- Leaflet Clustering Script -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+
+
+
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- map.js-->
+  <script src="map.js"></script>
+
+  <!-- Normal  javascript -->
+  <script src="script.js"></script>
+  <script src="result_image.js"></script>
+  <script src="search.js"></script>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+body {
+    font-family: 'Varela Round', serif;
+}
+
+#map {
+    height: 100vh;
+};
+
+#wholeMap{
+    position:relative;
+}
+
+#searchContainer {
+    position:absolute;
+    z-index: 314159;
+    top:80px;
+}
+
+@media (max-width:1000px){
+    #searchContainer {
+        position:absolute;
+        z-index: 314159;
+        top:450px;
+    }
+  }
+
+#searchButton:hover {
+    background-color: #c7dde1;
+    color:rgb(74, 74, 74);
+}
+
+#searchText {
+    height: 50px;
+    width: 50%;
+    border-radius: 5%;
+    background-color: rgb(195, 234, 255);
+    /* border-style: solid;
+    border-color: rgb(118, 118, 146); */
+    border-width: 0px;
+    font-size: medium;
+    color:white;
+    margin-right:1%;
+}
+
+.background{
+
+     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGk7pUr0FRLvnp9qYzgRnCJaCgDE4MMYgcIZVvodW9eBTW_-dlLh3TeEjvDQPAypwbDZc&usqp=CAU'); 
+    /* opacity: .5; */
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.bgimage{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(mybg.jpg) center center;
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+}
+
+.map_box{
+    margin:auto;
+    margin-top: 0em;
+    height:400px;
+    width:95%;
+    border-radius: 7%;
+    border-style: solid;
+    border-color: rgb(0, 59, 68);
+    border-width: 10px;
+
+}
+
+.result_box{
+    height:400px;
+    overflow: scroll;
+    background-color: #97d9e452;
+    width:30%;
+    border-radius: 2%;
+    min-width: 300px;
+}
+
+.navbar-custom{
+    background-color: #c7dde1;
+}
+
+res_img_box{
+    height: 300px;
+}
+
+.search-result{
+    background-color: #f1f1f1;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#btnReserve{
+    margin:5px;
+}
